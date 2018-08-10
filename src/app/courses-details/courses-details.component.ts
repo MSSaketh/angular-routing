@@ -31,4 +31,9 @@ export class CoursesDetailsComponent implements OnInit {
     this.router.navigate(['/courses', nextId]);
   }
 
+  gotoCourses(){
+    let selectId = this.courseId ? this.courseId:null;
+    this.router.navigate(['/courses',{id:selectId}]);
+  }
+
 }
