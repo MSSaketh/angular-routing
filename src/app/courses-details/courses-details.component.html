@@ -1,9 +1,15 @@
 <p>
   you have selected course with id = {{courseId}}
 </p>
-<a (click) = "goPrevious()"> previous </a>
-<a (click) = "goNext()"> next </a>
-
+<p>
+  <button (click) = "goPrevious()"> Previous </button>
+  <button (click) = "goNext()"> Next </button>
+</p>
+<p>
+  <button (click) = "showOverview()"> Overview </button>
+<button (click) = "showContact()"> Contact </button>
+</p>
+<router-outlet></router-outlet>
 <div>
-  <button (click) = "gotoCourses()">back</button>
+  <button (click) = "gotoCourses()">Back</button>
 </div>

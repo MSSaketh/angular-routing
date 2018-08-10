@@ -23,18 +23,28 @@ export class CoursesDetailsComponent implements OnInit {
 
   goPrevious(){
     let previousId = this.courseId - 1;
-    this.router.navigate(['/courses', previousId]);
+    // this.router.navigate(['/courses-list', previousId]);
+    this.router.navigate(['../', previousId], {relativeTo:this.route});
   }
 
   goNext(){
     let nextId = this.courseId + 1;
-    this.router.navigate(['/courses', nextId]);
+    // this.router.navigate(['/courses-list', nextId]);
+    this.router.navigate(['../', nextId], {relativeTo:this.route});
   }
 
   gotoCourses(){
     let selectId = this.courseId ? this.courseId:null;
     // this.router.navigate(['/courses',{id:selectId}]);
     this.router.navigate(['../', {id:selectId}], {relativeTo:this.route});
+  }
+
+  showOverview(){
+    this.router.navigate(['overview'], {relativeTo:this.route});
+  }
+
+  showContact(){
+    this.router.navigate(['contact'], {relativeTo:this.route});
   }
 
 }
