@@ -19,7 +19,8 @@ export class CoursesComponent implements OnInit {
   constructor(private router:Router, private route:ActivatedRoute) { }
 
   onSelect(course){
-    this.router.navigate(['/courses', course.id]);
+    // this.router.navigate(['/courses', course.id]);
+    this.router.navigate([course.id], {relativeTo:this.route});
   }
 
   isSelect(course){
