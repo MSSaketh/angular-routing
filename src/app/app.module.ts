@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoursesDetailsComponent } from './courses-details/courses-details.component';
 import { CourseOverviewComponent } from './course-overview/course-overview.component';
 import { CourseContactComponent } from './course-contact/course-contact.component';
+import { CoursesService } from './courses.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,9 +20,10 @@ import { CourseContactComponent } from './course-contact/course-contact.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,8 +13,9 @@ export class CoursesDetailsComponent implements OnInit {
   ngOnInit() {
     // let id = this.route.snapshot.params['id'];
     // this.courseId = id;
-    this.route.paramMap.subscribe((params:ParamMap)=>
+    this.route.paramMap.subscribe((params: ParamMap) =>
   {
+    // tslint:disable-next-line:radix
     let id = parseInt(params.get('id'));
     this.courseId = id;
 
